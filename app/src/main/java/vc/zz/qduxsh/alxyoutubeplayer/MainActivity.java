@@ -214,9 +214,7 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         if (playerViewList != null) {
             for (YoutubePlayerView v : playerViewList) {
-                if (v != null) {
-                    v.onDestroy();
-                }
+                if (v != null) v.onDestroy();
             }
         }
     }
@@ -232,5 +230,6 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         Log.i("Alex", "进入onBackPressed方法");
         closeFullScreen();
+        super.onBackPressed();
     }
 }

@@ -74,7 +74,7 @@ public class YoutubePlayerView extends WebView {
             if(prefixLength == VIDEO_ID_START_NORMAL.length()){//如果当前是普通类型的url
                 endIndex = videoUrl.indexOf("&");
             }else {
-                videoUrl.indexOf("?");
+                endIndex = videoUrl.indexOf("?");
             }
             if(endIndex == -1)endIndex = videoUrl.length();
             Log.i("Alex","startIndex::"+startIndex+"   end=="+endIndex);
